@@ -284,6 +284,9 @@ body {
 
 
 
+
+
+/* هذا القسم مازال قيد التعديل قابل للحذف */
 #gold-prices {
   background: linear-gradient(to bottom, #fff8dc, #f5deb3);
   padding: 20px;
@@ -333,7 +336,96 @@ body {
 
 
 
+/* هذا القسم  هذا قسم اسعار الذهب قابل للتعديل     */
+#gold-prices {
+  background: linear-gradient(to bottom, #fff8dc, #f5deb3);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+}
 
+.coins-animation::before,
+.coins-animation::after {
+  content: "🪙";
+  font-size: 2rem;
+  position: absolute;
+  animation: float 3s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+.coins-animation::before {
+  left: 20%;
+  top: 0;
+  animation-delay: 0s;
+}
+
+.coins-animation::after {
+  right: 20%;
+  top: 0;
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0% { top: 0; transform: rotate(0deg); }
+  50% { top: 60px; transform: rotate(180deg); }
+  100% { top: 0; transform: rotate(360deg); }
+}
+
+#prices p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+
+
+
+/* هذا القسم  هذا قسم السبرنكلز قابل للتعديل     */
+.butterfly-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  margin-top: -20px;
+}
+
+
+
+
+
+.butterfly-wrapper {
+  position: relative;
+  height: 60px;
+  overflow: visible;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.butterfly {
+  width: 40px;
+  height: 40px;
+  animation: flyCircle 5s linear infinite;
+  opacity: 0.9;
+  z-index: 5;
+}
+
+@keyframes flyCircle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
 
 
 
@@ -374,6 +466,29 @@ body {
 
 
 
+#location {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #87f4ab48;
+}
 
+#location h2 {
+  color: #947612;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
 
+.map-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
 
