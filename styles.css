@@ -278,6 +278,36 @@ body {
 
 
 
+.butterfly-wrapper {
+  position: relative;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -12px;
+  pointer-events: none;
+}
+
+.butterfly {
+  width: 120px;
+  height: auto;
+  animation: butterfly-fly 4s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes butterfly-fly {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+
 
 
 
